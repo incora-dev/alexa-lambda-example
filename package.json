@@ -1,0 +1,17 @@
+{
+  "name": "alexa-lambda-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy --aws-s3-accelerate"
+  },
+  "devDependencies": {
+    "serverless": "2.69.1",
+    "serverless-iam-roles-per-function": "1.0.4",
+    "serverless-pseudo-parameters": "2.4.0"
+  },
+  "dependencies": {
+    "ask-sdk": "2.1.0"
+  },
+  "license": "MIT"
+}

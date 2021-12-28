@@ -1,0 +1,18 @@
+service: alexa-lambda-example
+
+plugins:
+  - serverless-pseudo-parameters
+  - serverless-iam-roles-per-function
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  stage: prod
+
+functions:
+  info:
+    handler: src/index.handler
+    events:
+      - alexaSkill: amzn1.ask.skill.XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX52
+
