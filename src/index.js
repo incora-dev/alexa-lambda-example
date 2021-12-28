@@ -4,6 +4,7 @@ const RequestInterceptor = require('./interceptors/RequestInterceptor')
 const ResponseInterceptor = require('./interceptors/ResponseInterceptor')
 
 const LaunchRequestHandler = require('./handlers/LaunchRequestHandler')
+const AccountLinkingHandler = require('./handlers/AccountLinkingHandler')
 const TechnologyStackIntentHandler = require('./handlers/TechnologyStackIntentHandler')
 const HelpIntentHandler = require('./handlers/HelpIntentHandler')
 const CancelAndStopIntentHandler = require('./handlers/CancelAndStopIntentHandler')
@@ -22,6 +23,7 @@ module.exports.handler = async (event, context) => {
       ).
       addRequestHandlers(
         LaunchRequestHandler,
+        AccountLinkingHandler,
         TechnologyStackIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
